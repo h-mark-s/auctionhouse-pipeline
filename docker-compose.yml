@@ -1,6 +1,6 @@
 version: '3'
 services:
-  maria:
+  marks-mariadb:
     container_name: marks-mariadb
     image: mariadb
     volumes:
