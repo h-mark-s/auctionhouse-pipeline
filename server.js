@@ -8,7 +8,7 @@ const mysql = require('mysql');
 const cors = require('cors');
 
 const conn = mysql.createConnection({
-	host: 'maria',
+	host: 'marks-mariadb',
 	user: 'root',
 	password: 'example',
 	database: 'auction_app'
