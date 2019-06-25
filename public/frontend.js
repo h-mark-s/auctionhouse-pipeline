@@ -18,7 +18,7 @@ window.onload = loadData;
 
 function loadData() {
   const getItems = new XMLHttpRequest();
-  getItems.open('GET', 'http://localhost:80/api/items');
+  getItems.open('GET', 'http://localhost:9876/api/items');
   getItems.setRequestHeader('Content-Type', 'application/json');
   getItems.onload = data => {
     const response = JSON.parse(data.target.response);
@@ -52,7 +52,7 @@ form.addEventListener('submit', (event) => {
     }
   });
 
-  submitBid.open('POST', `http://localhost:80/api/items/${currentId}/bids`);
+  submitBid.open('POST', `http://localhost:9876/api/items/${currentId}/bids`);
   submitBid.setRequestHeader('Content-Type', 'application/json');
   submitBid.onload = data => {
     message.innerText = JSON.parse(data.target.response).message;
