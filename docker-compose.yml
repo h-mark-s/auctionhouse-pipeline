@@ -1,0 +1,22 @@
+version: '3'
+services:
+  maria:
+    container_name: maria
+    image: mariadb
+    volumes:
+      - container-volume:/var/lib/mysql
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+  app:
+    container_name: auction-house
+    restart: always
+    build: .
+    ports:
+      - '80:4500'
+    links:
+      - maria
+volumes:
+  container-volume:
