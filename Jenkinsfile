@@ -11,9 +11,7 @@ pipeline {
 		
 		stage ('Test') {
 			steps {
-				sh 'docker-compose up'
 				sh 'node test.js'
-				sh 'docker-compose down'
 			}
 		}
 
