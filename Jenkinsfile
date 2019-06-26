@@ -12,6 +12,7 @@ pipeline {
 		stage ('Test') {
 			steps {
 				sh 'node test.js'	
+				echo 'tests are ok'
 			}
 		}
 
