@@ -13,6 +13,7 @@ pipeline {
 			steps {
 				sh 'node test.js'	
 				echo 'tests are ok'
+				fdsafdsafasdklk
 			}
 		}
 
