@@ -11,7 +11,9 @@ pipeline {
 		
 		stage ('Test') {
 			steps {
-				echo 'Testing'
+				sh 'docker-compose up'
+				sh 'node test.js'
+				sh 'docker-compose down'
 			}
 		}
 
