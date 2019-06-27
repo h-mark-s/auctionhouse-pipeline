@@ -18,6 +18,7 @@ pipeline {
 		stage ('Test') {
 			steps {
 				sh 'node test.js'	
+				kfslkfdéalkfléakfsad
 			}
 		}
 
