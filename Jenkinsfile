@@ -3,6 +3,12 @@ pipeline {
 
 	stages {
 		
+		stage ('Checkout SCM') {
+			steps {
+				checkout scm
+			}
+		}
+
 		stage ('Build') {
 			steps {
 				sh 'docker-compose build'
